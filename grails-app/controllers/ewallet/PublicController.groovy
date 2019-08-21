@@ -2,5 +2,11 @@ package ewallet
 
 class PublicController {
 
-    def index() { }
+    def index()
+    {
+
+    }
+    def register (){
+
+    }
 }
