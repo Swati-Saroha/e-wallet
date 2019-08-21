@@ -1,19 +1,18 @@
 package ewallet
 
 import co.RegistrationCO
-
+import grails.plugin.springsecurity.annotation.Secured
+@Secured("isAnonymous()")
 class PublicController {
 
-    def index()
-    {
+    @Secured("isAuthenticated()")
+    def index() {}
 
-    }
-    def register () {
+    @Secured("isAnonymous()")
+    def register() {}
 
-    }
+
     def registration(RegistrationCO registrationCO) {
-        println("== params : "+params.firstName)
-
         if (!registrationCO.validate()) {
             render(view: 'register', model: [registrationCO: registrationCO])
         } else {
