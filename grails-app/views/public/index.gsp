@@ -9,9 +9,9 @@
 <html>
 <head>
     <title>E-Wallet</title>
-    <asset:stylesheet href="bootstrap.css"></asset:stylesheet>
-    <asset:stylesheet href="bootstrap.min.css"></asset:stylesheet>
-    <asset:stylesheet href="login.css"></asset:stylesheet>
+    <asset:stylesheet href="bootstrap.css"/>
+    <asset:stylesheet href="bootstrap.min.css"/>
+    <asset:stylesheet href="login.css"/>
 </head>
 
 <div class="container">

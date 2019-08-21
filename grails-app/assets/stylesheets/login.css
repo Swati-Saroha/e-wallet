@@ -17,5 +17,9 @@
      width: 49%;
 }
 .input_text{
-width: 350px;
+    width: 350px;
+}
+
+.margin_left_body {
+	margin: 19px 147px;
 }
