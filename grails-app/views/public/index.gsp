@@ -19,16 +19,15 @@
         <body class="text-lg-center">
         <div> Account Login </div>
 
-            <form class="form-group" action="login">
+            <g:form class="form-group" action="register">
                 <input class="form-control" type="email" name="email" id="email">
                 <br>
                 <input class="form-control" type="password" name="password" id="password">
                 <br>
-                <div id="b">
                 <button class="btn btn-success" type="submit">Login</button>
                 <button class="btn btn-primary" type="submit">SignUp</button>
-                </div>
-            </form>
+
+            </g:form>
         </body>
     </div>
 </div>
