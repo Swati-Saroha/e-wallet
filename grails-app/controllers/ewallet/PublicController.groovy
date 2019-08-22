@@ -5,6 +5,8 @@ import grails.plugin.springsecurity.annotation.Secured
 @Secured("isAnonymous()")
 class PublicController {
 
+    def userService
+
     @Secured("isAuthenticated()")
     def index() {}
 
@@ -16,6 +18,7 @@ class PublicController {
         if (!registrationCO.validate()) {
             render(view: 'register', model: [registrationCO: registrationCO])
         } else {
+            userService.add(registrationCO)
             render(view: 'register', model: [success: true])
         }
     }

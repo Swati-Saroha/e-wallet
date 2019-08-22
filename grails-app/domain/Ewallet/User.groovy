@@ -2,64 +2,71 @@ package Ewallet
 
 class User implements Serializable {
 
-	private static final long serialVersionUID = 1
+    private static final long serialVersionUID = 1
 
-	transient springSecurityService
+    transient springSecurityService
 
-	String username
-	String password
-	boolean enabled = true
-	boolean accountExpired
-	boolean accountLocked
-	boolean passwordExpired
+    String username
+    String password
+    String firstName
+    String lastName
+    String email
+    boolean enabled = true
+    boolean accountExpired
+    boolean accountLocked
+    boolean passwordExpired
 
-	User(String username, String password) {
-		this()
-		this.username = username
-		this.password = password
-	}
+    User(String username, String password) {
+        this()
+        this.username = username
+        this.password = password
+    }
 
-	@Override
-	int hashCode() {
-		username?.hashCode() ?: 0
-	}
+    @Override
+    int hashCode() {
+        username?.hashCode() ?: 0
+    }
 
-	@Override
-	boolean equals(other) {
-		is(other) || (other instanceof User && other.username == username)
-	}
+    @Override
+    boolean equals(other) {
+        is(other) || (other instanceof User && other.username == username)
+    }
 
-	@Override
-	String toString() {
-		username
-	}
+    @Override
+    String toString() {
+        username
+    }
 
-	Set<Role> getAuthorities() {
-		UserRole.findAllByUser(this)*.role
-	}
+    Set<Role> getAuthorities() {
+        UserRole.findAllByUser(this)*.role
+    }
 
-	def beforeInsert() {
-		encodePassword()
-	}
+    def beforeInsert() {
+        encodePassword()
+    }
 
-	def beforeUpdate() {
-		if (isDirty('password')) {
-			encodePassword()
-		}
-	}
+    def beforeUpdate() {
+        if (isDirty('password')) {
+            encodePassword()
+        }
+    }
 
-	protected void encodePassword() {
-		password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
-	}
+    protected void encodePassword() {
+        password = springSecurityService?.passwordEncoder ? springSecurityService.encodePassword(password) : password
+    }
 
-	static transients = ['springSecurityService']
+    static transients = ['springSecurityService']
 
-	static constraints = {
-		username blank: false, unique: true
-		password blank: false
-	}
+    static constraints = {
+        username blank: false, unique: true
+        password blank: false
+        firstName nullable: true
+        lastName nullable: true
+    }
 
-	static mapping = {
-		password column: '`password`'
-	}
+    static mapping = {
+        password column: '`password`'
+    }
+
+    static hasOne = [wallet: Wallet]
 }
