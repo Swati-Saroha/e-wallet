@@ -1,12 +1,10 @@
 .container {
- width: 50%;
- margin-left: 25%;
- margin-top: 200px;
- margin-bottom: 200px;
- width: 49%;
- width: 49%;
+            width: 550px;
+            margin-top: 162px;
+        }
 
-}
+
+
 .reg_container {
 
     width: 70%;
@@ -22,4 +20,39 @@
 
 .margin_left_body {
 	margin: 19px 147px;
+}
+.badge-light {
+    margin-right: 0px;
+    color: #212529;
+    background-color: #f8f9fa;
+}
+.btn:not(:disabled):not(.disabled) {
+    margin-bottom: 53px;
+    cursor: pointer;
+    margin-left: 376px;
+}
+.modal.in .modal-dialog {
+    -webkit-transform: translate(0,0);
+    -ms-transform: translate(0,0);
+    -o-transform: translate(0,0);
+    transform: translate(0,0);
+    width: 559px;
+    margin-bottom: 50px;
+    margin-top: 59px;
+}
+.h1, h1 {
+    font-size: 36px;
+    margin-left: 170px;
+}
+b, strong {
+    font-weight: 700;
+    margin-left: 150px;
+}
+.modal-footer .btn+.btn {
+    margin-bottom: 0;
+    margin-left: 5px;
+    margin-top: -53px;
+}
+.col-sm-2 {
+    width: -23.333333%;
 }

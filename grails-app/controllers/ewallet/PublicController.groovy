@@ -13,7 +13,6 @@ class PublicController {
     @Secured("isAnonymous()")
     def register() {}
 
-
     def registration(RegistrationCO registrationCO) {
         if (!registrationCO.validate()) {
             render(view: 'register', model: [registrationCO: registrationCO])

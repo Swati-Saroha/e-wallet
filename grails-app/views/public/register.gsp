@@ -45,7 +45,7 @@
         <div class="form-group row">
             <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
             <div class="col-sm-10">
-                <g:textField name="firstName" class="form-control" placeholder="First Name"/>
+                <g:textField name="firstName" class="form-control" placeholder="firstName"/>
             </div>
         </div>
 
@@ -65,7 +65,6 @@
 
         <div class="form-group row">
             <label for="password" class="col-sm-2 col-form-label">Password</label>
-
             <div class="col-sm-10">
                <g:passwordField name="password" class="form-control" placeholder="Password"/>
             </div>
