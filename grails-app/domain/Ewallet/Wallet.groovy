@@ -6,6 +6,8 @@ class Wallet {
     double balance
 
     static belongsTo = [user: User]
+    static hasMany = [transaction: Transaction]
+
 }
 
 

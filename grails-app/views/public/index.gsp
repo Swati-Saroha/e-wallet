@@ -9,26 +9,50 @@
 <html>
 <head>
     <title>E-Wallet</title>
-    <asset:stylesheet href="bootstrap.css"/>
-    <asset:stylesheet href="bootstrap.min.css"/>
+
+
     <asset:stylesheet href="login.css"/>
+    %{--    <asset:stylesheet href="bootstrap.min.css"/>--}%
+
+    %{--<asset:stylesheet href="bootstrap.min.css"/>
+    <asset:javascript src="bootstrap.min.js"/>--}%
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 </head>
 
-<div class="container">
-    <div class="container">
-        <body class="text-lg-center">
-        <div> Account Login </div>
+<body>
 
-            <g:form class="form-group" action="register">
-                <input class="form-control" type="email" name="email" id="email">
-                <br>
-                <input class="form-control" type="password" name="password" id="password">
-                <br>
-                <button class="btn btn-success" type="submit">Login</button>
-                <button class="btn btn-primary" type="submit">SignUp</button>
-
-            </g:form>
-        </body>
+<div class="container align-items-md-center">
+    <div class="div_header">
+        <p class="ewallet_heading">
+            E-WALLET
+        </p>
+        <h2><g:render template="/public/Templates/ewallethome"/></h2>
     </div>
+
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th scope="col">SNo</th>
+                    <th scope="col">Transaction Number</th>
+                    <th scope="col">Amount</th>
+                    <th scope="col">Type</th>
+                    <th scope="col">Status</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>&nbsp</td>
+                    <td>&nbsp</td>
+                    <td>&nbsp</td>
+                    <td>&nbsp</td>
+                    <td>&nbsp</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
 </div>
+</body>
 </html>
