@@ -23,12 +23,13 @@
 </head>
 
 <body>
-<h2><g:render template="/public/Templates/ewallethome"/></h2>
+
 <div class="container align-items-md-center">
     <div class="div_header">
         <p class="ewallet_heading">
             E-WALLET
         </p>
+        <h2><g:render template="/public/Templates/ewallethome"/></h2>
     </div>
 
             <table class="table table-bordered">

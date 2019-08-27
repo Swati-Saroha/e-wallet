@@ -13,7 +13,6 @@ class PublicController {
     def springSecurityService
 
     @Secured("isAuthenticated()")
-
     def index() {
         User loggedInUser = springSecurityService.currentUser
         println(params)
