@@ -8,6 +8,8 @@ class Wallet {
     static belongsTo = [user: User]
     static hasMany = [transaction: Transaction]
 
+
+
 }
 
 
