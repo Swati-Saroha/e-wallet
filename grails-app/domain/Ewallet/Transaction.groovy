@@ -10,15 +10,11 @@ class Transaction {
     TransactionStatus status
     TransactionType type
     String summary
-    Wallet paidTo
-    Wallet receivedFrom
-
 
     static belongsTo = [wallet: Wallet]
 
     static constraints = {
         summary nullable: true, blank: true
-        paidTo nullable: true
-        receivedFrom nullable: true
     }
+
 }
