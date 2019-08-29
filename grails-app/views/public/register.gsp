@@ -14,11 +14,10 @@
     <title class="font-weight-bold">Registration Form</title>
 
 </head>
-
-<div class="reg_container text-lg-center">
+    <div class="reg_container text-lg-center">
     <body>
     <div class="font-weight-bold">Please fill in this form to create an account</div>
-
+    <div class="bg-light">
     <g:form name="register" controller="public" action="registration">
         <g:hasErrors bean="${registrationCO}">
             <div style="color: red">
@@ -45,28 +44,28 @@
         <div class="form-group row">
             <label for="firstName" class="col-sm-2 col-form-label">First Name</label>
             <div class="col-sm-10">
-                <g:textField name="firstName" class="form-control" placeholder="firstName"/>
+                <g:textField name="firstName" class="form-control" placeholder="firstName" id="firstName"/>
             </div>
         </div>
 
         <div class="form-group row">
             <label for="lastName" class="col-sm-2 col-form-label">Last Name</label>
             <div class="col-sm-10">
-            <g:textField name="lastName" class="form-control" placeholder="lastName"/>
+            <g:textField name="lastName" class="form-control" placeholder="lastName" id="lastName"/>
             </div>
         </div>
 
         <div class="form-group row">
             <label for="email" class="col-sm-2 col-form-label">Email</label>
             <div class="col-sm-10">
-                <g:textField name="email" class="form-control" placeholder="email"/>
+                <g:textField name="email" class="form-control" placeholder="email" id="email"/>
             </div>
         </div>
 
         <div class="form-group row">
             <label for="password" class="col-sm-2 col-form-label">Password</label>
             <div class="col-sm-10">
-               <g:passwordField name="password" class="form-control" placeholder="Password"/>
+               <g:passwordField name="password" class="form-control" placeholder="Password" id="password"/>
             </div>
         </div>
 
@@ -74,12 +73,13 @@
             <label for="confirmPassword" class="col-sm-2 col-form-label">Confirm Password</label>
 
             <div class="col-sm-10">
-                <g:passwordField name="confirmPassword" class="form-control" placeholder="confirmPassword"/>
+                <g:passwordField name="confirmPassword" class="form-control" placeholder="confirmPassword" id="confirmPassword"/>
             </div>
         </div>
-        <button type="submit" class="btn btn-primary mb-2">Register</button>
+        <button type="submit" class="btn btn-primary mb-2" id="submit">Register</button>
     </g:form>
-
+    </div>
     </body>
-</div>
+    </div>
+
 </html>

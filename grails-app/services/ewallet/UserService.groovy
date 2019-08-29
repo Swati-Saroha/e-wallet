@@ -21,6 +21,16 @@ class UserService {
         )
         user.save(failOnError: true)
         UserRole userRole = new UserRole(user: user, role: Role.findByAuthority("ROLE_CUSTOMER"))
+
         userRole.save(failOnError: true)
+        List<Role> roles = Role.findAllByAuthority("AT")
+        List<Long> l1 = [1,2,3,4]
+        println l1.size() //4
+        l1.count()
+        print l1.count { it } //3 or 4
+        l1.sum { it } // sum
+        l1.max { it } // 4
+        l1.min { it } // 1
+        l1.groupBy { it } //
     }
 }
