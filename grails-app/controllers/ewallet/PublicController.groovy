@@ -2,11 +2,9 @@ package ewallet
 
 import Ewallet.Transaction
 import Ewallet.User
-import Ewallet.Wallet
 import co.RegistrationCO
 import grails.converters.JSON
 import grails.plugin.springsecurity.annotation.Secured
-import groovy.text.Template
 import vo.TransactionVO
 
 @Secured("isAnonymous()")
@@ -29,7 +27,6 @@ class PublicController {
         }
         List<Transaction> transactionList = Transaction.findAllByWallet(loggedInUser.wallet)
 
-        println(transactionList)
 
         List<TransactionVO> transactionVOList = []
 
@@ -53,12 +50,18 @@ class PublicController {
     }
 
 
+    @Secured("isAuthenticated()")
+    def payment() {
+        String myTemplateString = groovyPageRenderer.render(template: '/public/templates/ewalletHome')
+        Map map = [template: myTemplateString]
+        render map as JSON
 
+    }
 
     @Secured("isAuthenticated()")
-    def ajaxHitDummy(String email, Double amount) {
-        String myTemplateString = groovyPageRenderer.render(template:'/public/Templates/ewallethome')
-        Map map = [template: myTemplateString]
+    def recharge(Double amount) {
+        String rechargeTemplate = groovyPageRenderer.render(template: '/public/templates/rechargeWallet')
+        Map map = [template: rechargeTemplate]
         render map as JSON
     }
 }
