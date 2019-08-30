@@ -15,9 +15,9 @@ class PaymentController {
         redirect(controller: 'public', action: 'index', params: map)
     }
 
-    def submit(Double amount) {
+   /* def submit(Double amount) {
         Map map = paymentService.submit(amount)
         redirect()
     }
-
+*/
 }

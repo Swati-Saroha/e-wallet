@@ -13,18 +13,19 @@ $(document).ready(function () {
             }
         })
     });
-    $('#rechargeButton').on( 'click' , function () {
+
+    $('#rechargeButton').on('click', function () {
         $.ajax({
             url: BASE_URL + "/public/recharge",
             data: {amount: 123},
             dataType: 'json',
             success: function (responseData) {
-                $("#myModal").html(responseData.template);
+                $("#rechargeModal").html(responseData.template);
             },
             error: function (request, status, error) {
-                alert("this is errors")
+                alert("Error")
             }
-    })
+        })
     })
 });
 

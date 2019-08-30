@@ -1,8 +1,9 @@
 package enums
 
 enum RequestStatus {
-    PENDING,
-    CANCELLED,
-    COMPLETED
+
+    APPROVED,
+    DECLINE,
+    PENDING
 
 }

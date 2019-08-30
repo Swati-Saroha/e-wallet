@@ -14,7 +14,6 @@ class RegistrationCO {
     static constraints = {
         firstName blank: false, nullable: false
         lastName blank: false, nullable: false
-        email unique: true
         password minSize: 5
         confirmPassword blank: false, nullable: false
 
