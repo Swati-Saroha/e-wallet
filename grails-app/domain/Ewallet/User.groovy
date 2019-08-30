@@ -69,4 +69,6 @@ class User implements Serializable {
     }
 
     static hasOne = [wallet: Wallet]
+
+    static hasMany = [request: Request]
 }
