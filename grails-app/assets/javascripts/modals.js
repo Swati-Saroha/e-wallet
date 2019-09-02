@@ -27,6 +27,20 @@ $(document).ready(function () {
             }
         })
     })
+    /*$('#submit').on('click', function () {
+        $.ajax({
+            url: BASE_URL + "/admin/adminpanel",
+            data: {amount: 123},
+            dataType: 'json',
+            success: function (responseData) {
+                $("#submit").html(responseData.);
+            },
+            error: function (request, status, error) {
+                alert("Error")
+            }
+        })
+    })*/
+
 });
 
 
