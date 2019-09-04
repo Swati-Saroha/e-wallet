@@ -64,13 +64,13 @@
         </tr>
         </thead>
         <tbody>
-        <g:each in="${transactionList}">
+        <g:each in="${transactionList}" var="transaction" status="i">
             <tr>
-                <td>1</td>
-                <td>${it.transactionNumber}</td>
-                <td>${it.amount}</td>
-                <td>${it.type}</td>
-                <td>${it.status}</td>
+                <td>${i+1}</td>
+                <td>${transaction.transactionNumber}</td>
+                <td>${transaction.amount}</td>
+                <td>${transaction.type}</td>
+                <td>${transaction.status}</td>
             </tr>
         </g:each>
         </tbody>

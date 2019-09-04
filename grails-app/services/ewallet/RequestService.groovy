@@ -23,4 +23,8 @@ class RequestService {
 
     }
 
+    def requestId(params) {
+        return Request.findById(id)
+    }
+
 }

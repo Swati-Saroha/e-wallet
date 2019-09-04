@@ -1,20 +1,23 @@
 package ewallet
 
-import Ewallet.Request
-import grails.plugin.springsecurity.annotation.Secured
 
-@Secured("isAuthenticated()")
+import grails.plugin.springsecurity.annotation.Secured
+import vo.RequestVO
+
+@Secured("ROLE_ADMIN")
 class AdminController {
 
     def adminService
+    def requestService
 
-    @Secured("isAuthenticated()")
+
     def index() {
-        List<Request> requestList = adminService.fetchPendingRequest()
-        [requestList: requestList]
-       println(requestList)
-        }
-
-
+        List<RequestVO> requestVOList = adminService.fetchPendingRequest()
+        [requestList: requestVOList]
     }
 
+    def approveRequest() {
+      println(params)
+    }
+
+}

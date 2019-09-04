@@ -27,20 +27,40 @@ $(document).ready(function () {
             }
         })
     })
-    /*$('#submit').on('click', function () {
+
+    ('#approveButton').on('click', function () {
+
+        var requestId = $("#requestId").val();
         $.ajax({
-            url: BASE_URL + "/admin/adminpanel",
-            data: {amount: 123},
+            url: BASE_URL + "/admin/index",
+            data: {requestId: requestId},
             dataType: 'json',
-            success: function (responseData) {
-                $("#submit").html(responseData.);
+            success: function () {
+                alert("success")
+                $("#approveButton").html();
             },
-            error: function (request, status, error) {
+            error: function () {
                 alert("Error")
             }
         })
-    })*/
+    })
 
+    ('#declineButton').on('click', function () {
+
+        var requestId = $("#requestId").val();
+        $.ajax({
+            url: BASE_URL + "/admin/index",
+            data: {requestId: requestId},
+            dataType: 'json',
+            success: function () {
+                alert("success")
+                $("#declineButton").html();
+            },
+            error: function () {
+                alert("Error")
+            }
+        })
+    })
 });
 
 
