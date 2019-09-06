@@ -2,7 +2,6 @@ package ewallet
 
 import Ewallet.Transaction
 import Ewallet.User
-import Ewallet.Wallet
 import enums.TransactionStatus
 import enums.TransactionType
 import grails.transaction.Transactional
@@ -45,8 +44,5 @@ class PaymentService {
                 wallet: user.wallet
         )
         transaction.save(failOnError: true)
-
-
-
     }
 }

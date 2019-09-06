@@ -1,5 +1,6 @@
 package ewallet
 
+
 import grails.plugin.springsecurity.annotation.Secured
 
 @Secured("isAuthenticated()")
@@ -11,4 +12,7 @@ class RequestController {
         Map map = requestService.save(amount)
         redirect(controller: 'public', action: 'index', params: map)
     }
+
+
+
 }
